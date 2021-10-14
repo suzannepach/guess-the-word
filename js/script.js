@@ -7,6 +7,9 @@ const remainingGuessesSpan = document.querySelector(".remaining span");
 const message = document.querySelector(".message");
 const playAgainButton = document.querySelector(".play-again");
 
+const guessFormLabel = document.querySelector(".guess-form label");
+const guessFormInput = document.querySelector(".guess-form input");
+
 let word = "magnolia";
 let guessedLetters = [];
 let remainingGuesses = 8;
@@ -140,9 +143,14 @@ const UpdateGuessesRemaining = function (guess) {
 };
 
 const startOver = function () {
-    guessLetterButton.classList.add("hide");
     remainingGuessesElement.classList.add("hide");
     guessedLettersElement.classList.add("hide");
+    
+    // remove guess form
+    guessLetterButton.classList.add("hide");
+    guessFormLabel.classList.add("hide");
+    guessFormInput.classList.add("hide");
+
     playAgainButton.classList.remove("hide");
 };
 
@@ -159,9 +167,16 @@ playAgainButton.addEventListener ("click", function (e) {
     //Restart the game
     getWord(word);
 
-    //show guess button remaining guesses paragraph and guessed letters and hide play again button
+    //show remaining guesses paragraph and guessed letters 
     guessLetterButton.classList.remove("hide");
     remainingGuessesElement.classList.remove("hide");
     guessedLettersElement.classList.remove("hide");
+
+    // add guess form
+    guessLetterButton.classList.remove("hide");
+    guessFormLabel.classList.remove("hide");
+    guessFormInput.classList.remove("hide");
+
+    // hide play again button
     playAgainButton.classList.add("hide");
 });
