@@ -7,8 +7,9 @@ const remainingGuessesSpan = document.querySelector(".remaining span");
 const message = document.querySelector(".message");
 const playAgainButton = document.querySelector(".play-again");
 
-const guessFormLabel = document.querySelector(".guess-form label");
-const guessFormInput = document.querySelector(".guess-form input");
+//const guessFormLabel = document.querySelector(".guess-form label");
+//const guessFormInput = document.querySelector(".guess-form input");
+const guessForm = document.querySelector(".guess-form");
 
 let word = "magnolia";
 let guessedLetters = [];
@@ -147,9 +148,10 @@ const startOver = function () {
     guessedLettersElement.classList.add("hide");
     
     // remove guess form
-    guessLetterButton.classList.add("hide");
-    guessFormLabel.classList.add("hide");
-    guessFormInput.classList.add("hide");
+    //guessLetterButton.classList.add("hide");
+    //guessFormLabel.classList.add("hide");
+    //guessFormInput.classList.add("hide");
+    guessForm.classList.add("hide");
 
     playAgainButton.classList.remove("hide");
 };
@@ -173,9 +175,10 @@ playAgainButton.addEventListener ("click", function (e) {
     guessedLettersElement.classList.remove("hide");
 
     // add guess form
-    guessLetterButton.classList.remove("hide");
-    guessFormLabel.classList.remove("hide");
-    guessFormInput.classList.remove("hide");
+    //guessLetterButton.classList.remove("hide");
+    //guessFormLabel.classList.remove("hide");
+    //guessFormInput.classList.remove("hide");
+    guessForm.classList.remove("hide");
 
     // hide play again button
     playAgainButton.classList.add("hide");
