@@ -151,6 +151,7 @@ const startOver = function () {
     //guessLetterButton.classList.add("hide");
     //guessFormLabel.classList.add("hide");
     //guessFormInput.classList.add("hide");
+    guessForm.classList.remove('display');
     guessForm.classList.add("hide");
 
     playAgainButton.classList.remove("hide");

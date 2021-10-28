@@ -45,10 +45,6 @@ h1 {
   width: 90%;
 }
 
-.hide {
-  display: none;
-}
-
 .highlight {
   padding: 0.25em;
   background: #ffe2d6;
@@ -91,6 +87,10 @@ h1 {
   font-weight: normal;
   font-size: 14px;
   text-align: center;
+}
+
+.hide {
+  display: none;
 }
 
 input {
